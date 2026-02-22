@@ -8,11 +8,11 @@ To simulate a real-world SSH brute-force attack against a Linux server in a cont
 
 ## Lab Setup
 
-| Role        | Machine            | IP Address        |
+| Role        | Machine            | IP Address      |
 |------------|-------------------|-------------------|
-| Attacker   | Kali Linux         | 192.168.100.10    |
-| Victim     | Ubuntu Server      | 192.168.100.20    |
-| SIEM       | Wazuh Manager      | 10.0.0.116         |
+| Attacker   | Kali Linux         | 192.168.100.10   |
+| Victim     | Ubuntu Server      | 192.168.100.20   |
+| SIEM       | Wazuh Manager      | 10.0.0.116       |
 
 ⸻
 
@@ -28,7 +28,9 @@ Result:
 ⸻
 ## Attack Evidence
 ### Brute Force Attack Execution
+
 ![Hydra Execution](../screenshots/attack/hydra-ssh-bruteforce-execution.png)
+
 Hydra was used to perform a password brute-force attack.
 hydra -l fakeuser -P /usr/share/wordlists/rockyou.txt ssh://192.168.100.20 -t 4
 
