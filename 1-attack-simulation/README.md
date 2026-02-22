@@ -30,6 +30,7 @@ Result:
 ### Brute Force Attack Execution
 
 ![Hydra Execution-using my wordlist](../screenshots/attack/hydra-ssh-bruteforce-execution.png)
+
 ![Hydra Execution-using rockyou.txt](../screenshots/attack/hydra-bruteforce-2nd-execution.jpeg)
 
 Hydra was used to perform a password brute-force attack.
@@ -68,6 +69,8 @@ This produced:
 ⸻
 
 ### Post-Authentication Activity (Privilege Escalation Simulation)
+
+![Post Exploitation](../screenshots/attack/Post-exploitation.jpeg)
 
 After login, sudo activity was triggered:
 sudo -i
