@@ -75,25 +75,39 @@ Investigation was performed using:
 |Discovery	|Account Discovery	|T1087|
 
 ## Investigation Highlights
-	•	Identified source IP performing repeated authentication attempts
-	•	Observed “Failed password” log spikes
-	•	Correlated timeline of attack activity
-	•	Confirmed successful login event
-	•	Tracked post-authentication sudo activity
-	•	Validated rule triggers and alert levels in Wazuh
+1.Identified source IP performing repeated authentication attempts
+2.Observed “Failed password” log spikes
+3.Correlated timeline of attack activity
+4.Confirmed successful login event
+5.Tracked post-authentication sudo activity
+6.Validated rule triggers and alert levels in Wazuh
 
 ⸻
 
 ## Skills Demonstrated
-	•	Attack Simulation (Hydra SSH brute force)
-	•	Log Analysis (Linux authentication logs)
-	•	Bash Scripting for detection automation
-	•	SIEM Investigation (Wazuh)
-	•	Alert Tuning & Rule Analysis
-	•	MITRE ATT&CK Mapping
-	•	Incident Reporting
-	•	SOC Workflow Documentation
+1.Attack Simulation (Hydra SSH brute force)
+2.Log Analysis (Linux authentication logs)
+3.Bash Scripting for detection automation
+4.SIEM Investigation (Wazuh)
+5.Alert Tuning & Rule Analysis
+6.MITRE ATT&CK Mapping
+7.Incident Reporting
+8.SOC Workflow Documentation
 
 ⸻
 
 ## Project Structure
+- [1. Attack Simulation](./1-attack-simulation)
+- [2. Detection Engineering](./2-detection-engineering)
+- [3. Manual Log Analysis](./3-manual-log-analysis)
+- [4. SIEM Investigation](./4-siem-investigation)
+- [5. MITRE ATT&CK Mapping](./5-mitre-mapping)
+- [6. Incident Report](./6-incident-report)
+- [screenshots](./screenshots)
+- [scripts](./scripts)
+
+## Outcome
+
+This project demonstrates hands-on SOC Level 1 capabilities including detection validation, event correlation, incident investigation, and reporting in a simulated enterprise security environment.
+
+The entire lifecycle from attack execution to investigation and documentation was completed independently.
