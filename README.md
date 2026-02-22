@@ -44,7 +44,7 @@ Custom scripts were developed to:
 	•	Highlight suspicious IP addresses
 	•	Log security alerts locally
 
-Scripts are available in the /scripts directory.
+Scripts are available in the [scripts](./scripts) directory.
 
 ⸻
 
