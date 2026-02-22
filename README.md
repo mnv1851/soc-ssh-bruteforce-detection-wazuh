@@ -69,7 +69,31 @@ Investigation was performed using:
 | Stage	           | Technique        	| ID        |
 |------------------|--------------------|-----------|
 | Initial Access   | Brute Force        | T1110 |
-|Persistence (if account created) |Create Account |	T1136|
+|Persistence  |Create Account |	T1136|
 |Privilege Escalation|	Abuse Elevation Control Mechanism|	T1548|
 |Credential Access	|Valid Accounts	|T1078|
 |Discovery	|Account Discovery	|T1087|
+
+## Investigation Highlights
+	•	Identified source IP performing repeated authentication attempts
+	•	Observed “Failed password” log spikes
+	•	Correlated timeline of attack activity
+	•	Confirmed successful login event
+	•	Tracked post-authentication sudo activity
+	•	Validated rule triggers and alert levels in Wazuh
+
+⸻
+
+## Skills Demonstrated
+	•	Attack Simulation (Hydra SSH brute force)
+	•	Log Analysis (Linux authentication logs)
+	•	Bash Scripting for detection automation
+	•	SIEM Investigation (Wazuh)
+	•	Alert Tuning & Rule Analysis
+	•	MITRE ATT&CK Mapping
+	•	Incident Reporting
+	•	SOC Workflow Documentation
+
+⸻
+
+## Project Structure
