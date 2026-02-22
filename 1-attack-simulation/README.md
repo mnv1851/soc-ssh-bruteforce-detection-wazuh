@@ -6,15 +6,13 @@ To simulate a real-world SSH brute-force attack against a Linux server in a cont
 
 ⸻
 
-### Lab Environment
+## Lab Setup
 
-Attacker: Kali Linux
-Target: Ubuntu Server
-Service Targeted: SSH (Port 22)
-Attack Tool: Hydra
-
-Victim IP: 192.168.100.20
-Attacker IP: 192.168.100.10
+| Role        | Machine            | IP Address        |
+|------------|-------------------|-------------------|
+| Attacker   | Kali Linux         | 192.168.100.10    |
+| Victim     | Ubuntu Server      | 192.168.100.20    |
+| SIEM       | Wazuh Manager      | 10.0.0.116         |
 
 ⸻
 
@@ -28,9 +26,9 @@ Result:
 	•	SSH service accessible
 
 ⸻
-
+## Attack Evidence
 ### Brute Force Attack Execution
-
+![Hydra Execution](../screenshots/attack/hydra-ssh-bruteforce-execution.png)
 Hydra was used to perform a password brute-force attack.
 hydra -l fakeuser -P /usr/share/wordlists/rockyou.txt ssh://192.168.100.20 -t 4
 
@@ -45,7 +43,7 @@ Hydra attempted thousands of login combinations against the SSH service.
 ⸻
 
 ### Attack Behavior Observed on Victim
-
+![Victim Logs](../screenshots/attack/victim-bruteforce-logs.jpeg)
 The attack generated:
 	•	Multiple “Failed password” logs
 	•	Invalid user login attempts
@@ -56,7 +54,7 @@ These logs were written to:
 /var/log/auth.log
 
 ### Simulated Successful Compromise
-
+![Hydra Success](../screenshots/attack/hydra-bruteforce-success.jpeg)
 To simulate real attacker success, a valid login event was generated:
 ssh ubuntu@192.168.100.20
 This produced:
