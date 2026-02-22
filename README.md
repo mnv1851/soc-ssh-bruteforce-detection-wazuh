@@ -1,7 +1,7 @@
 # soc-ssh-bruteforce-detection-wazuh
 Full attack lifecycle SOC lab: simulated SSH brute-force attack, endpoint log analysis using custom Bash scripts, detection and alerting with Wazuh SIEM, investigation workflow, MITRE ATT&amp;CK mapping, and incident response documentation.
 
-##Executive Summary
+## Executive Summary
 
 This project demonstrates a full attack lifecycle simulation and detection of an SSH brute-force attack in a controlled SOC lab environment.
 
@@ -66,3 +66,10 @@ Investigation was performed using:
 ⸻
 
 ## MITRE ATT&CK Mapping
+| Stage	           | Technique        	| ID        |
+|------------------|--------------------|-----------|
+| Initial Access   | Brute Force        | T1110 |
+|Persistence (if account created) |Create Account |	T1136|
+|Privilege Escalation|	Abuse Elevation Control Mechanism|	T1548|
+|Credential Access	|Valid Accounts	|T1078|
+|Discovery	|Account Discovery	|T1087|
