@@ -29,7 +29,8 @@ Result:
 ## Attack Evidence
 ### Brute Force Attack Execution
 
-![Hydra Execution](../screenshots/attack/hydra-ssh-bruteforce-execution.png)
+![Hydra Execution-using my wordlist](../screenshots/attack/hydra-ssh-bruteforce-execution.png)
+![Hydra Execution-using rockyou.txt](../screenshots/attack/hydra-bruteforce-2nd-execution.jpeg)
 
 Hydra was used to perform a password brute-force attack.
 hydra -l fakeuser -P /usr/share/wordlists/rockyou.txt ssh://192.168.100.20 -t 4
