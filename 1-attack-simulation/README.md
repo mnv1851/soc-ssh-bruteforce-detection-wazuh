@@ -102,3 +102,10 @@ A SOC analyst must be able to:
 	•	Investigate privilege escalation attempts
 	•	Escalate incident if compromise confirmed
 
+## Next Phase: Detection Engineering
+
+After simulating the SSH brute-force attack, the next step is to design and validate detection logic inside Wazuh.
+
+Continue to:
+
+[Detection Engineering](../2-detection-engineering/README.md)
