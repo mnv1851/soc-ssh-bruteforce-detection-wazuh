@@ -102,4 +102,4 @@ A SOC analyst must be able to:
 	•	Investigate privilege escalation attempts
 	•	Escalate incident if compromise confirmed
 ## Next 
-- [2. Detection Engineering](./2-detection-engineering)
+- [Detection Engineering](./2-detection-engineering)
