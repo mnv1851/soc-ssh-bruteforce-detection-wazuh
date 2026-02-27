@@ -5,7 +5,8 @@
 To design and validate detection logic for identifying SSH brute-force attempts and successful compromises using Wazuh SIEM.
 
 ---
-
+## Wazuh Dashboard
+![wazuh-dashboard-connected-linux](../screenshots/Detection/wazuh-dashboard.jpeg)
 ## Log Source
 
 - Log File: /var/log/auth.log
@@ -30,7 +31,7 @@ The detection focuses on identifying:
 ## Detection Indicators
 
 ### Failed Login Attempts
-
+![failed-attempts](../screenshots/Detection/wazuh-authentication-failed.jpeg)
 Wazuh Rule Groups Observed:
 - sshd
 - authentication_failed
@@ -44,7 +45,7 @@ Failed password for invalid user fakeuser from 192.168.100.10 port 42358 ssh2
 ---
 
 ### Successful Authentication
-
+![successfull-login](../screenshots/Detection/wazuh-succesful-login.jpeg)
 Rule Group:
 - authentication_success
 
@@ -56,7 +57,7 @@ Accepted password for ubuntu from 192.168.100.10 port 43904 ssh2
 ---
 
 ### Privilege Escalation
-
+![privilege-escalation-and-backdoor](../screenshots/Detection/wazuh-privelege-escation-persistence.jpeg)
 Program: sudo
 
 Example Log:
