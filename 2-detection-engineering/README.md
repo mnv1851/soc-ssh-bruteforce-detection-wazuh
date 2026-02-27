@@ -107,3 +107,9 @@ Detection successfully identified:
 - Credential brute force
 - Successful compromise
 - Privilege escalation
+- 
+## Next Phase: Manual Log Analysis
+
+To validate detection independently of SIEM, I performed manual log analysis using custom Bash scripts.
+
+[Manual Log Analysis](../3-manual-log-analysis/README.md)
