@@ -136,4 +136,4 @@ Example output:
 
 To Showcase my writeup and documentaion skills, lets move forward to :
 
-[Manual Log Analysis](../4-incident-report/README.md)
+[Incident Response and Reporting](../4-incident-report/README.md)
