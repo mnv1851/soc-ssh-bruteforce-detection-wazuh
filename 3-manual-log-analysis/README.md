@@ -1,10 +1,15 @@
 # 3. Manual Log Analysis – Custom SSH Brute-Force Detection
 ## Objective
 
-This section demonstrates manual detection of SSH brute-force activity using custom Bash scripts.
+This section demonstrates manual detection of SSH brute-force activity using linux commands : grep, awk, sort, uniq, head, and custom Bash scripts.
 
 The goal was to simulate how a SOC analyst performs log-based investigation without relying entirely on SIEM automation.
 
+### Linux command focused on :
+- Filtering logs for better tracing of attack.
+- Getting overview of how /var/log/auth.log store logs in files.
+- Picking attacker timestamp, ip, port for further information.
+  
 ### The detection logic focuses on:
 
 - Parsing /var/log/auth.log
