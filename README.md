@@ -3,20 +3,20 @@ Full attack lifecycle SOC lab: simulated SSH brute-force attack, endpoint log an
 
 ## Executive Summary
 
-This project demonstrates a full attack lifecycle simulation and detection of an SSH brute-force attack in a controlled SOC lab environment.
+- This project demonstrates a full attack lifecycle simulation and detection of an SSH brute-force attack in a controlled SOC lab environment.
 
-The objective was to simulate a realistic attack, detect it using custom bash-based detection logic and Wazuh SIEM, perform log analysis, map activity to MITRE ATT&CK, and generate a formal incident report.
+- The objective was to simulate a realistic attack, detect it using custom bash-based detection logic and Wazuh SIEM, perform log analysis, map activity to MITRE ATT&CK, and generate a formal incident report.
 
-The lab replicates how a SOC Analyst would handle authentication-based attacks in an enterprise environment.
+- The lab replicates how a SOC Analyst would handle authentication-based attacks in an enterprise environment.
 
 ⸻
 
 ## Lab Architecture
 
-Attacker Machine: Kali Linux
-Victim Machine: Ubuntu Server (Wazuh Agent Installed)
-SIEM Platform: Wazuh Manager & Dashboard
-Network: Isolated VirtualBox Lab Environment
+- Attacker Machine: Kali Linux
+- Victim Machine: Ubuntu Server (Wazuh Agent Installed)
+- SIEM Platform: Wazuh Manager & Dashboard
+- Network: Isolated VirtualBox Lab Environment
 
 ## Flow:
 
@@ -26,11 +26,11 @@ Attacker (Hydra) → Ubuntu Victim (SSH Service) → Wazuh Agent → Wazuh Manag
 
 ## Attack Scenario
 
-An SSH brute-force attack was simulated using Hydra against the Ubuntu victim machine.
+-  An SSH brute-force attack was simulated using Hydra against the Ubuntu victim machine.
 
-The attacker attempted thousands of password combinations targeting the SSH service (port 22).
+- The attacker attempted thousands of password combinations targeting the SSH service (port 22).
 
-After multiple authentication failures, a successful login was generated to simulate account compromise.
+- After multiple authentication failures, a successful login was generated to simulate account compromise.
 
 ⸻
 
@@ -39,10 +39,10 @@ After multiple authentication failures, a successful login was generated to simu
 1. Manual Bash-Based Detection
 
 Custom scripts were developed to:
-	•	Detect excessive failed SSH login attempts
-	•	Identify potential brute-force patterns
-	•	Highlight suspicious IP addresses
-	•	Log security alerts locally
+	-	Detect excessive failed SSH login attempts
+	-	Identify potential brute-force patterns
+	-	Highlight suspicious IP addresses
+	-	Log security alerts locally
 
 Scripts are available in the [scripts](./scripts) directory.
 
@@ -51,17 +51,17 @@ Scripts are available in the [scripts](./scripts) directory.
 2. Wazuh SIEM Detection
 
 Wazuh detected:
-	•	Multiple failed authentication attempts
-	•	Invalid user login attempts
-	•	Successful SSH authentication after brute-force activity
-	•	Privilege escalation using sudo
+	-	Multiple failed authentication attempts
+	-	Invalid user login attempts
+	-	Successful SSH authentication after brute-force activity
+	-	Privilege escalation using sudo
 
 Investigation was performed using:
-	•	agent.name filtering
-	•	SSH log queries
-	•	Accepted password event searches
-	•	Rule level analysis
-	•	Correlation of source IP activity
+	-	agent.name filtering
+	-	SSH log queries
+	-	Accepted password event searches
+	-	Rule level analysis
+	-	Correlation of source IP activity
 
 ⸻
 
@@ -76,23 +76,23 @@ Investigation was performed using:
 
 ## Investigation Highlights
 - 1.Identified source IP performing repeated authentication attempts
-2.Observed “Failed password” log spikes
-3.Correlated timeline of attack activity
-4.Confirmed successful login event
-5.Tracked post-authentication sudo activity
-6.Validated rule triggers and alert levels in Wazuh
+- 2.Observed “Failed password” log spikes
+- 3.Correlated timeline of attack activity
+- 4.Confirmed successful login event
+- 5.Tracked post-authentication sudo activity
+- 6.Validated rule triggers and alert levels in Wazuh
 
 ⸻
 
 ## Skills Demonstrated
-1.Attack Simulation (Hydra SSH brute force)
-2.Log Analysis (Linux authentication logs)
-3.Bash Scripting for detection automation
-4.SIEM Investigation (Wazuh)
-5.Alert Tuning & Rule Analysis
-6.MITRE ATT&CK Mapping
-7.Incident Reporting
-8.SOC Workflow Documentation
+- 1.Attack Simulation (Hydra SSH brute force)
+- 2.Log Analysis (Linux authentication logs)
+- 3.Bash Scripting for detection automation
+- 4.SIEM Investigation (Wazuh)
+- 5.Alert Tuning & Rule Analysis
+- 6.MITRE ATT&CK Mapping
+- 7.Incident Reporting
+- 8.SOC Workflow Documentation
 
 ⸻
 
