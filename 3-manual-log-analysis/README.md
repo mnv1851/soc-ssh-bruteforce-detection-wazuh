@@ -13,7 +13,18 @@ The goal was to simulate how a SOC analyst performs log-based investigation with
 - Picking attacker timestamp, ip, port for further information using grep-awk-sort-uniq-command.
   
   ![grep-awk-sort-uniq-command](../screenshots/log-analysis/grep-awk-sort-uniq-command.jpeg)
-  
+
+  ## Detection Design
+
+### Two custom scripts were developed:
+
+- ssh_bruteforce_detector.sh
+![ssh_bruteforce_detector.sh](../screenshots/log-analysis/detection-script.jpeg)
+
+- ssh_compromise_detector.sh
+  ![ssh_compromise_detector.sh](../screenshots/log-analysis/compromise-script.jpeg)
+
+
 ### The detection logic focuses on:
 
 - Parsing /var/log/auth.log
@@ -28,13 +39,6 @@ The goal was to simulate how a SOC analyst performs log-based investigation with
 
 - Generating local alert logs
 
-## Detection Design
-
-### Two custom scripts were developed:
-
-- ssh_bruteforce_detector.sh
-
-- ssh_compromise_detector.sh
 
 ### These scripts implement:
 
@@ -92,12 +96,14 @@ SUCCESS=$(sudo grep -a "Accepted password" $LOGFILE | grep "$ip")
 ### Classified as CRITICAL
 
 ### Indicates brute-force success and potential account compromise
+![Compromise-Indication](../screenshots/log-analysis/compromise-script-succesful.jpeg)
 
 | If no success occurs:
 
 ### Classified as WARNING
 
 ### Indicates brute-force attempt without confirmed compromise
+![Detection-Indication](../screenshots/log-analysis/detection-script-successful.jpeg)
 
 ## Alert Output
 
@@ -125,4 +131,9 @@ Example output:
 - Manual compromise validation
 
 - SOC-style triage workflow
+- 
+## Next Phase: Incident Response & Reporting
 
+To Showcase my writeup and documentaion skills, lets move forward to :
+
+[Manual Log Analysis](../3-manual-log-analysis/README.md)
