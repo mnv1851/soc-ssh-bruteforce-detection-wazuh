@@ -1,0 +1,14 @@
+LOGFILE="/var/log/auth.log"
+THRESHOLD=5
+
+echo "Checking for SSH brute force attempts..."
+
+sudo grep -a "Failed password" $LOGFILE | \
+grep "$(date '+%Y-%m-%dT%H:%M')" | \
+grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | \
+sort | uniq -c | while read count ip
+do
+    if [ "$count" -gt "$THRESHOLD" ]; then
+        echo "ALERT: possible brute-force detected from $ip with $count attempts"
+    fi
+done

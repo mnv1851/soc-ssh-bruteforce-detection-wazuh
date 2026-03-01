@@ -1,0 +1,5 @@
+LINUX COMMANDS FOR LOG ANALYSIS
+
+1. sudo grep -a "Failed password" /var/log/auth.log | awk '{print $9}' | sort | uniq -c
+2.sudo grep -a "Failed password" /var/log/auth.log | awk '{print substr($1,1,19)}' | sort | uniq -c
+3.sudo grep -a "Failed password" /var/log/auth.log | head
