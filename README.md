@@ -75,8 +75,7 @@ Investigation was performed using:
 |Discovery	|Account Discovery	|T1087|
 
 ## Investigation Highlights
-1.Identified source IP performing repeated authentication attempts
-
+- 1.Identified source IP performing repeated authentication attempts
 2.Observed “Failed password” log spikes
 3.Correlated timeline of attack activity
 4.Confirmed successful login event
