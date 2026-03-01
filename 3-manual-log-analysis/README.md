@@ -7,9 +7,11 @@ The goal was to simulate how a SOC analyst performs log-based investigation with
 
 ### Linux command focused on :
 - Filtering logs for better tracing of attack.
-- Getting overview of how /var/log/auth.log store logs in files.
+- Getting overview of how /var/log/auth.log store logs in files using grep-head-command.
+  
   ![grep-head-command](../screenshots/log-analysis/grep-head-command.jpeg)
-- Picking attacker timestamp, ip, port for further information.
+- Picking attacker timestamp, ip, port for further information using grep-awk-sort-uniq-command.
+  
   ![grep-awk-sort-uniq-command](../screenshots/log-analysis/grep-awk-sort-uniq-command.jpeg)
   
 ### The detection logic focuses on:
