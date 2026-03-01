@@ -100,9 +100,7 @@ Investigation was performed using:
 - [1. Attack Simulation](./1-attack-simulation)
 - [2. Detection Engineering](./2-detection-engineering)
 - [3. Manual Log Analysis](./3-manual-log-analysis)
-- [4. SIEM Investigation](./4-siem-investigation)
-- [5. MITRE ATT&CK Mapping](./5-mitre-mapping)
-- [6. Incident Report](./6-incident-report)
+- [4. Incident Report](./4-incident-report)
 - [screenshots](./screenshots)
 - [scripts](./scripts)
 
