@@ -16,13 +16,10 @@ The goal was to simulate how a SOC analyst performs log-based investigation with
 
   ## Detection Design
 
-### Two custom scripts were developed:
+### custom scripts were developed:
 
 - ssh_bruteforce_detector.sh
 ![ssh_bruteforce_detector.sh](../screenshots/log-analysis/detection-script.jpeg)
-
-- ssh_compromise_detector.sh
-  ![ssh_compromise_detector.sh](../screenshots/log-analysis/compromise-script.jpeg)
 
 
 ### The detection logic focuses on:
