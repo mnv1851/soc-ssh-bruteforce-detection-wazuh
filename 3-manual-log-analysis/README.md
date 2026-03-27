@@ -128,7 +128,7 @@ Example output:
 - Manual compromise validation
 
 - SOC-style triage workflow
-- 
+  
 ## Next Phase: Incident Response & Reporting
 
 To Showcase my writeup and documentaion skills, lets move forward to :
